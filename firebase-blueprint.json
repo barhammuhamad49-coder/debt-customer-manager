@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profiles and store ledger data",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastLogin": { "type": "string" }
+      },
+      "subcollections": {
+        "data": {
+          "title": "Ledger Data",
+          "description": "Store ledger data including customers, transactions, and daily requests",
+          "type": "object",
+          "properties": {
+            "customers": { "type": "array" },
+            "transactions": { "type": "array" },
+            "dailyRequests": { "type": "array" },
+            "deletedCustomers": { "type": "array" },
+            "deletedTransactions": { "type": "array" },
+            "savedItems": { "type": "array" },
+            "lastUserId": { "type": "string" },
+            "updatedAt": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
